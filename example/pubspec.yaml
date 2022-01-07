@@ -1,8 +1,9 @@
-name: flutter_secure_file_storage_inspector
-description: Plugin that enables inspection of flutter_secure_file_storage in storage_inspector
+name: example
+description: A new Flutter package project.
 version: 0.0.1
 homepage: https://github.com/NicolaVerbeeck/flutter_secure_file_storage_inspector
 repository: https://github.com/NicolaVerbeeck/flutter_secure_file_storage_inspector
+publish_to: none
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
@@ -13,8 +14,9 @@ dependencies:
     sdk: flutter
   flutter_secure_file_storage: ^0.0.4
   storage_inspector: ^0.1.2
-  tuple: ^2.0.0
-  uuid: ^3.0.5
+  flutter_secure_storage: ^5.0.2
+  flutter_secure_file_storage_inspector:
+    path: ../
 
 dev_dependencies:
   flutter_test:

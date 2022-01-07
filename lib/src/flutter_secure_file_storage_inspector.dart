@@ -11,10 +11,7 @@ class SecureFileStorageInspector implements KeyValueServer {
   @override
   final Set<StorageType> supportedKeyTypes = const {StorageType.string};
   @override
-  final Set<StorageType> supportedValueTypes = const {
-    StorageType.string,
-    StorageType.binary
-  };
+  final Set<StorageType> supportedValueTypes = const {StorageType.binary};
   @override
   final Map<ValueWithType, StorageType> typeForKey = const {};
   @override
@@ -49,8 +46,7 @@ class SecureFileStorageInspector implements KeyValueServer {
 
   @override
   Future<List<Tuple2<ValueWithType, ValueWithType>>> get allValues async {
-    return (await storage.readAll())
-        .keys
+    return (await storage.getAllKeys())
         .map(
           (e) => Tuple2(
             ValueWithType(StorageType.string, e),
