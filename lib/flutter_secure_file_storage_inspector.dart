@@ -1,0 +1,1 @@
+library flutter_secure_file_storage_inspector;
